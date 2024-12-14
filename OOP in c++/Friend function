@@ -1,0 +1,136 @@
+Friend function
+
+#include<iostream>
+using namespace std;
+class b;
+class a
+{
+    private:
+    int x;
+    public:
+    void get_value(int c)
+    {
+        x=c;
+    }
+    friend int add(a,b);
+};
+class b
+{
+    private:
+    int y;
+    public:
+    void get_value(int d)
+    {
+        y=d;
+    }
+    friend int add(a,b);
+};
+int add(a num1 , b num2){
+
+    int sum = num1.x + num2.y;
+
+    cout << "sum of integer is " << sum << endl;
+
+return sum;
+}
+int main() 
+{
+    a num1;
+    b num2;
+    num1.get_value(8);
+    num2.get_value(12);
+    add (num1,num2);
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Friend function
+
+#include<iostream>
+#include<string>
+using namespace std;
+class b;
+class a
+{
+    private:
+    int x;
+    public:
+    void get_value(int d)
+    {
+        x=d;
+    }
+    friend int ad(a,b);
+};
+class b
+{
+    private:
+    int y;
+    public:
+    void get_value(int f)
+    {
+        y=f;
+    }
+    friend int ad(a,b);
+};
+int ad(a num1, b num2)
+{
+    int sum;
+    sum=num1.x+num2.y;
+    cout<<"The sum of the value is "<<sum<<endl;
+    return sum;
+}
+int main()
+{
+   a n1;
+   b n2;
+    n1.get_value(9);
+    n2.get_value(10);
+    ad(n1,n2);
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Friend funtion
+
+#include<iostream>
+#include<string>
+using namespace std;
+class b;
+class a
+{
+    private:
+    int x;
+    public:
+    void get_value(int a)
+    {
+        x=a;
+    }
+    friend int re(a,b);
+};
+class b
+{
+    private:
+    int y;
+    public:
+    void get_value(int b)
+    {
+        y=b;
+    }
+    friend int re(a,b);
+};
+int re(a num1 , b num2)
+{
+    int sum;
+    sum=num1.x+num2.y;
+    cout<<"The sum of the value is "<<sum<<endl;
+    return sum;
+}
+int main()
+{
+    a j;
+    b k;
+    j.get_value(44);
+    k.get_value(23);
+     re(j,k);
+
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
