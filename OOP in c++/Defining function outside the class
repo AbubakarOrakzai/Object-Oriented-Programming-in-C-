@@ -1,0 +1,31 @@
+Defining function out side the class 
+#include<iostream>
+using namespace std;
+class demo
+{
+    private:
+    int a;
+    int b;
+    public:
+    demo()
+    {
+      
+    }
+    demo(int c,int d)
+    {
+        a=c;
+        b=d;
+    }
+    void display();
+};
+void demo::display()
+{
+    cout<<"The value of the first variable is "<<a<<endl;
+    cout<<"The value of the second variable is "<<b<<endl;
+}
+int main()
+{
+    demo d1;
+    d1.display();
+
+}
