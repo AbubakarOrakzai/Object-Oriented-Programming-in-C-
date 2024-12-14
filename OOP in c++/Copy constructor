@@ -1,0 +1,48 @@
+Copy constructor
+
+Deep copy constructor
+
+
+/*
+In this code as the all member of the class is public so we do not need to make any special function to access it.
+The code will hepl us to change the value of the copy object and it will not reflect in the first object from which 
+copy the object. This is happen by using the concept of the deep copy
+*/
+#include<iostream>
+using namespace std;
+class student 
+{
+    public:
+    string name;
+    int roll;
+    int *ptr;
+    student(string a, int b, int p)
+    {
+        name=a;
+        roll=b;
+        ptr = new int;
+        *ptr=p;
+    }
+    student(student &old)
+    {
+        name=old.name;
+        roll=old.roll;
+        *ptr=*(old.ptr);
+    }
+    void display()
+    {
+        cout<<"The name of the student is: "<<name<<endl;
+        cout<<"The roll number of the student is: "<<roll<<endl;
+        cout<<"The ptr is: "<<*ptr<<endl;
+    }
+};
+int main()
+{
+    student s1("neha",1,100);
+    student s2(s1);
+    *(s2.ptr)=200;
+    s1.display();
+    s2.display();
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
