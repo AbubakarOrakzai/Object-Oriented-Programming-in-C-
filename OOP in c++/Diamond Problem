@@ -1,0 +1,77 @@
+Diamond problem
+
+#include<iostream>
+using namespace std;
+class a
+{
+    public:
+    char A='A';
+
+};
+class b:virtual public a{
+    public:
+    char B='B';
+
+};
+class c:virtual public a{
+    public:
+    char C='C';
+};
+class d:virtual public a{
+    public:
+    char D='D';
+};
+class e:public c
+{
+    public:
+    char E='E';
+};
+class f:public b,public d
+{
+    public:
+    char F='F';
+};
+class g:public f
+{
+    public:
+    char G='G';
+};
+class h:virtual public f{
+    public:
+    char H='H';
+};
+class i:virtual public f
+{
+    public:
+    char I='I';
+};
+class j:virtual public f
+{
+    public:
+    char J='J';
+};
+class k:public h,public i,public j
+{
+    public:
+    char K='K';
+    void display()
+    {
+        cout<<"The data of class a is "<<A<<endl;
+        cout<<"The data of class b is "<<B<<endl;
+        cout<<"The data of class c is "<<C<<endl;
+        cout<<"The data of class d is "<<D<<endl;
+        cout<<"The data of class e is "<<E<<endl;
+        cout<<"The data of clss f is "<<F<<endl;
+        cout<<"The data of class g is "<<G<<endl;
+        cout<<"The data of class h is "<<H<<endl;
+        cout<<"The data of class i is "<<I<<endl;
+        cout<<"THe data of class j is "<<J<<endl;
+        cout<<"The data of class k is "<<K<<endl;
+    }
+};
+int main()
+{
+    k obj;
+    obj.display();
+
+}
