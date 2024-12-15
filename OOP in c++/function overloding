@@ -1,0 +1,29 @@
+Function overloading 
+
+#inlude<iostream>
+using namespace std;
+class Person
+{
+private:
+string name;
+int age;
+public:
+void display(string name, int age)
+{
+
+cout<<"The value of a is "<<a<<endl;
+cout<<"The value of b is "<<endl;
+}
+void display()
+{
+cout<<"This function is succesfully call "<<endl;
+}
+};
+int main()
+{
+Person obj1,obj2;
+obj1.display(87,78);
+obj.display();
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
