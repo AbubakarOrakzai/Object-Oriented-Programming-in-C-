@@ -46,3 +46,59 @@ int main()
 }
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Deep copy
+
+#include<iostream>                                          By making deep copy we can now make the copy of the object and then make changeses in the object and 
+using namespace std;                                        the changes is will not reflect in the firt object 
+
+class Myclass {
+    private:
+        int *data;
+    public:
+        // Constructor
+        Myclass(int x) {
+            data = new int;                                      Here we allocate dynamic memeroy to the data
+            *data = x;
+        }
+
+        // Copy Constructor (Deep Copy)
+        Myclass(const Myclass &sample) {
+            data = new int;
+            *data = *(sample.data);
+        }
+
+        // Destructor
+        ~Myclass() {
+            delete data;
+        }
+
+        // Method to display the value
+        void display() const {
+            cout << "Value: " << *data << endl;
+        }
+
+        // Method to set the value
+        void setValue(int value) {
+            *data = value;
+        }
+};
+
+int main() {
+    Myclass obj1(10);
+    Myclass obj2 = obj1; // Calls the copy constructor
+
+    obj1.display();
+    obj2.display();
+
+    // Setting new value for obj2
+    obj2.setValue(20);
+
+    cout << "The value after changing:" << endl;
+    obj1.display();
+    obj2.display();
+
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
