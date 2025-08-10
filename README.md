@@ -1,4 +1,4 @@
-# Object-Oriented-Programming-in-C-
+# Object-Oriented-Programming-in-C++
 <h1 align="center">Hi 👋, I'm Abubakar Orakzai</h1>
 <h3 align="center">Hello! I am a passionate Computer Science student at the University of Management and Technology (UMT). I love enhancing my skills through exciting projects and real-world problem-solving.</h3>
 
