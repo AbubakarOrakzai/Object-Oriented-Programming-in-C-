@@ -50,13 +50,6 @@ This repository contains a comprehensive collection of C++ programs and examples
 
 ---
 
-## 🛠️ How to Run
-
-1. Clone the repository:
-   
-   git clone https://github.com/AbubakarOrakzai/OOP-in-Cpp.git
-
----
 
 ## 📂 Repository Structure
 
